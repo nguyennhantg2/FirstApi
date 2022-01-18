@@ -1,16 +1,19 @@
 {
-  "name": "appfb",
+  "name": "firstapi",
   "version": "1.0.0",
-  "description": "app fb",
+  "description": "the first api with koajs, nodejs, mongodb",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "nguyen nhan",
+  "author": "Nhan Nguyen",
   "license": "ISC",
   "dependencies": {
-    "dotenv": "^11.0.0",
+    "@koa/router": "^10.1.1",
+    "body-parser": "^1.19.1",
     "koa": "^2.13.4",
-    "koa-router": "^10.1.1"
+    "koa-bodyparser": "^4.3.0",
+    "koa-router": "^10.1.1",
+    "mongodb": "^4.3.0"
   }
 }
