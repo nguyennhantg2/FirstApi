@@ -1,15 +1,15 @@
-const Koa = require('Koa');
+const Koa = require('koa')
 
-const bodyParser = require("koa-bodyparser");
+const routes = require('./routes')
 
-const commentRouter = require("./routes/index");
+const app = new Koa()
 
-const app = new Koa();
+app.use(routes)
 
-app.use(bodyParser());
+app.use(ctx => {
+  ctx.body = 'Hello Koa'
+})
 
-app.use(commentRouter.routes()).use(commentRouter.allowedMethods());
-
-app.listen(4000);
-
-console.log('Koa is running');
+app.listen(3000, function(){
+    console.log('sever is running');
+})
